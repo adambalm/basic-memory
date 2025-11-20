@@ -105,3 +105,72 @@ User can reference:
 ---
 
 **Claude's Note to Future Self:** User is RIGHT to be skeptical. Earn trust through working solutions, not ambitious promises. Start small, prove value, then expand.
+
+
+---
+
+## GitHub Setup Progress (November 20, 2025 - Late Evening)
+
+### Completed ✅
+1. ✅ Initialized git repository in `C:/Users/Guest1/basic-memory`
+2. ✅ Created `.gitignore` for Basic Memory
+3. ✅ Made initial commit (commit `188c834`) with 10 files
+4. ✅ Created `README.md` with repository structure and setup guide
+5. ✅ Second commit (commit `c6b0516`) with documentation
+
+### Manual Steps Required (gh CLI not available)
+
+**To complete GitHub setup:**
+
+1. **Create private repository on GitHub**
+   - Go to https://github.com/new
+   - Repository name: `ed-oconnell-basic-memory`
+   - Description: "Personal knowledge graph for Ed O'Connell - shared context across Claude Code instances"
+   - Visibility: **Private** (IMPORTANT)
+   - Do NOT initialize with README (we already have one)
+
+2. **Add remote and push**
+   ```bash
+   cd /c/Users/Guest1/basic-memory
+   git remote add origin git@github.com:adambalm/ed-oconnell-basic-memory.git
+   # OR if using HTTPS:
+   git remote add origin https://github.com/adambalm/ed-oconnell-basic-memory.git
+   
+   git push -u origin master
+   ```
+
+3. **Setup on adambalm**
+   ```bash
+   ssh adambalm
+   cd ~
+   git clone git@github.com:adambalm/ed-oconnell-basic-memory.git basic-memory
+   
+   # Configure Basic Memory to use this directory
+   # Edit ~/.config/basic-memory/config.json:
+   # Change "main" project path to "/home/ed/basic-memory"
+   ```
+
+### Sync Workflow (Once Setup Complete)
+
+**On suphouse (ending session):**
+```bash
+cd /c/Users/Guest1/basic-memory
+git add -A
+git commit -m "Session: [description]"
+git push
+```
+
+**On adambalm (starting session):**
+```bash
+cd ~/basic-memory
+git pull
+```
+
+### Current Local State
+- Repository: Clean, 2 commits, on branch `master`
+- Files: 11 files committed (10 markdown + 1 .gitignore)
+- Remote: Not yet configured (waiting for GitHub repo creation)
+- Size: 2,235 lines across all files
+
+### Next Session Resume Point
+When resuming: "Let's finish the GitHub setup for Basic Memory" - user needs to create the repo on GitHub web interface, then we'll add remote and push.
