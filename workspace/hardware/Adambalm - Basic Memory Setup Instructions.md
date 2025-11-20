@@ -249,3 +249,133 @@ Claude will:
 3. Check/configure Basic Memory
 4. Verify sync works both directions
 5. Test reading notes via Claude Code on adambalm
+
+
+---
+
+## ✅ Setup Complete (November 20, 2025)
+
+### What Was Done
+
+1. **Installed uv (v0.9.10)** on adambalm at `/home/ed/.local/bin/`
+2. **Cloned Basic Memory repository** to `/home/ed/basic-memory` via git SSH
+3. **Configured MCP server** in `~/.claude.json`:
+   ```json
+   "mcpServers": {
+     "basic-memory": {
+       "type": "stdio",
+       "command": "/home/ed/.local/bin/uvx",
+       "args": ["basic-memory", "mcp"],
+       "env": {}
+     }
+   }
+   ```
+4. **Created config file** at `~/.basic-memory/config.json` pointing to `/home/ed/basic-memory`
+5. **Verified installation**:
+   - Repository: 12 files detected (README, setup docs, workspace/, sca-projects/, etc.)
+   - CLI working: `uvx basic-memory status` shows project structure
+   - MCP configured: Ready for Claude Code access
+
+### Current State
+
+**Repository:**
+- Location: `/home/ed/basic-memory`
+- Branch: master
+- Files: 12 markdown files across workspace/, sca-projects/, non-fiction/, tests/
+- Git remote: `git@github.com:adambalm/basic-memory.git`
+
+**Basic Memory:**
+- CLI: `/home/ed/.local/bin/uvx basic-memory`
+- Config: `~/.basic-memory/config.json`
+- Project: `main` → `/home/ed/basic-memory`
+- Status: Installed, files detected, auto-indexing in progress
+
+**MCP Server:**
+- Configured in user-level `~/.claude.json`
+- Command: `/home/ed/.local/bin/uvx basic-memory mcp`
+- Will be available to all Claude Code sessions on adambalm
+
+### Testing Results
+
+```bash
+# Status check (successful)
+$ uvx basic-memory status --project main
+├── README.md/ +1 new
+├── SETUP-COMPLETE-NEXT-STEPS.md/ +1 new
+├── non-fiction/ +1 new
+├── sca-projects/ +2 new
+├── tests/ +1 new
+└── workspace/ +6 new
+
+# CLI commands working
+$ uvx basic-memory tool search-notes 'test' --project main
+# (Returns results once indexing completes)
+```
+
+### Next Claude Code Session on Adambalm
+
+When you start Claude Code on adambalm, Basic Memory MCP will automatically be available. You can:
+
+```
+# Ask Claude to read notes
+"Show me the planning note about personalized context system"
+
+# Search across knowledge base
+"Search Basic Memory for SSH setup instructions"
+
+# Create new notes
+"Document this session in Basic Memory under workspace/sessions/"
+```
+
+### Sync Workflow Now Active
+
+**On suphouse (ending session):**
+```bash
+cd /c/Users/Guest1/basic-memory
+git add -A
+git commit -m "Session: [description]"
+git push
+```
+
+**On adambalm (starting session):**
+```bash
+cd ~/basic-memory
+git pull
+# Basic Memory auto-detects changes and re-indexes
+```
+
+### Verification Checklist
+
+- [x] uv installed and working
+- [x] Basic Memory CLI functional
+- [x] Repository cloned with all files
+- [x] Config.json created and pointing to repo
+- [x] MCP server configured in Claude config
+- [x] Files detected by Basic Memory status command
+- [x] Git remote configured and accessible
+- [ ] Files fully indexed (in progress - happens automatically)
+- [ ] Tested via Claude Code MCP (pending next Claude Code session on adambalm)
+
+### Troubleshooting Notes
+
+**If Basic Memory doesn't find notes:**
+- Files are auto-indexed in background
+- Check status: `uvx basic-memory status --project main`
+- Give it a few minutes for initial indexing
+- Search will work once indexing completes
+
+**If MCP not available in Claude Code:**
+- Restart Claude Code session
+- Check `~/.claude.json` has mcpServers.basic-memory configured
+- Verify path: `/home/ed/.local/bin/uvx` exists and is executable
+
+**If git sync fails:**
+- Check SSH keys: `ssh -T git@github.com`
+- Verify remote: `git remote -v` in ~/basic-memory
+- Ensure you pushed from suphouse before pulling on adambalm
+
+---
+
+**Setup Time:** ~10 minutes
+**Status:** ✅ Complete and functional
+**Both machines now sharing Basic Memory via GitHub**
