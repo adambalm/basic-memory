@@ -1,0 +1,29 @@
+# Basic Memory
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+.basic-memory/
+
+# Obsidian (if used)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.~*
+
+# IDE
+.vscode/
+.idea/
+
+# Log files
+*.log
