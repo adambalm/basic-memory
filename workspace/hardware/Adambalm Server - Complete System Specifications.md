@@ -3,14 +3,18 @@ title: Adambalm Server - Complete System Specifications
 type: note
 permalink: workspace/hardware/adambalm-server-complete-system-specifications
 tags:
-- adambalm
-- hardware
-- system-specs
-- gpu
-- nvidia
-- docker
-- ubuntu
-- server
+  - adambalm
+  - hardware
+  - system-specs
+  - gpu
+  - nvidia
+  - docker
+  - ubuntu
+  - server
+status: canonical
+temporal_type: dynamic
+valid_from: 2025-11-20
+last_verified: 2025-11-20
 ---
 
 # Adambalm Server - Complete System Specifications

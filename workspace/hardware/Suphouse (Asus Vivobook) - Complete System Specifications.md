@@ -3,14 +3,18 @@ title: Suphouse (Asus Vivobook) - Complete System Specifications
 type: note
 permalink: workspace/hardware/suphouse-asus-vivobook-complete-system-specifications
 tags:
-- suphouse
-- hardware
-- system-specs
-- laptop
-- asus
-- vivobook
-- windows-11
-- development
+  - suphouse
+  - hardware
+  - system-specs
+  - laptop
+  - asus
+  - vivobook
+  - windows-11
+  - development
+status: canonical
+temporal_type: dynamic
+valid_from: 2025-11-20
+last_verified: 2025-11-20
 ---
 
 # Suphouse (Asus Vivobook) - Complete System Specifications

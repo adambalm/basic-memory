@@ -8,6 +8,11 @@ tags:
 - resume
 - ed-oconnell
 - completed
+status: completed
+temporal_type: point-in-time
+valid_from: 2025-11-13
+valid_until: null
+last_verified: 2025-11-26
 ---
 
 # Yale Job Application - Digital Content and Chatbot Manager

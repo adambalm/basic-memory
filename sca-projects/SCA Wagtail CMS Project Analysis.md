@@ -8,6 +8,11 @@ tags:
 - django
 - adambalm-server
 - remote-analysis
+status: canonical
+temporal_type: dynamic
+valid_from: 2025-11-20
+valid_until: null
+last_verified: 2025-11-26
 ---
 
 # SCA Wagtail CMS Project Analysis

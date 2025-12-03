@@ -3,12 +3,17 @@ title: Chrome Browser Session - November 20, 2025
 type: note
 permalink: workspace/browser-sessions/chrome-browser-session-november-20-2025
 tags:
-- chrome
-- browser-session
-- google-workspace
-- google-classroom
-- sca
-- memory-optimization
+  - chrome
+  - browser-session
+  - google-workspace
+  - google-classroom
+  - sca
+  - memory-optimization
+status: archived
+temporal_type: point-in-time
+valid_from: 2025-11-20
+valid_until: 2025-11-20
+last_verified: 2025-11-26
 ---
 
 # Chrome Browser Session Snapshot

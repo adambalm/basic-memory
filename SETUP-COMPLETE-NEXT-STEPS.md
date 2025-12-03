@@ -1,3 +1,14 @@
+---
+title: Basic Memory GitHub Setup - Status and Next Steps
+type: note
+permalink: setup-complete-next-steps
+status: completed
+temporal_type: static
+valid_from: 2025-11-20
+valid_until: 2025-11-26
+last_verified: 2025-11-26
+---
+
 # Basic Memory GitHub Setup - Status and Next Steps
 
 **Date:** November 20, 2025, Late Evening

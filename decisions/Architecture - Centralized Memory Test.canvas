@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"adambalm","type":"text","text":"**ADAMBALM**\n\nCanonical Brain\n- HTTP API :8765\n- SQLite DB\n- Ollama\n- Markdown files","x":0,"y":0,"width":250,"height":200},
+		{"id":"suphouse","type":"text","text":"**suphouse**\n\nWindows\nClaude Code\nCursor","x":-400,"y":300,"width":200,"height":120},
+		{"id":"imac","type":"text","text":"**iMac**\n\nmacOS","x":-100,"y":300,"width":150,"height":80},
+		{"id":"macpro","type":"text","text":"**Mac Pro**\n\nmacOS","x":150,"y":300,"width":150,"height":80},
+		{"id":"iphone","type":"text","text":"**iPhone**\n\nTermius","x":400,"y":300,"width":150,"height":80}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"suphouse","fromSide":"top","toNode":"adambalm","toSide":"left","label":"HTTP queries"},
+		{"id":"e2","fromNode":"imac","fromSide":"top","toNode":"adambalm","toSide":"bottom","label":"HTTP queries"},
+		{"id":"e3","fromNode":"macpro","fromSide":"top","toNode":"adambalm","toSide":"bottom","label":"HTTP queries"},
+		{"id":"e4","fromNode":"iphone","fromSide":"top","toNode":"adambalm","toSide":"right","label":"SSH"}
+	]
+}

@@ -3,12 +3,16 @@ title: SSH Key-Based Authentication Setup - adambalm
 type: note
 permalink: workspace/hardware/ssh-key-based-authentication-setup-adambalm
 tags:
-- ssh
-- authentication
-- adambalm
-- tailscale
-- security
-- setup
+  - ssh
+  - authentication
+  - adambalm
+  - tailscale
+  - security
+  - setup
+status: canonical
+temporal_type: static
+valid_from: 2025-11-20
+last_verified: 2025-11-20
 ---
 
 # SSH Key-Based Authentication Setup - adambalm Server

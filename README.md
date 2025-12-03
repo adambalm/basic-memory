@@ -1,3 +1,13 @@
+---
+title: Ed O'Connell - Basic Memory Knowledge Base
+type: note
+permalink: readme
+status: canonical
+temporal_type: static
+valid_from: 2025-11-26
+last_verified: 2025-11-26
+---
+
 # Ed O'Connell - Basic Memory Knowledge Base
 
 Personal knowledge graph for Ed O'Connell, synced across multiple machines to enable shared context between Claude Code instances.

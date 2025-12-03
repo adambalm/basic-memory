@@ -2,6 +2,15 @@
 title: Personalized Context System - Vision and Next Steps
 type: note
 permalink: workspace/planning/personalized-context-system-vision-and-next-steps
+tags:
+  - planning
+  - vision
+  - context-system
+  - ai-learning
+status: draft
+temporal_type: dynamic
+valid_from: 2025-11-20
+last_verified: 2025-11-26
 ---
 
 # Personalized Context System - Vision and Next Steps
