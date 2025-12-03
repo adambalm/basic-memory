@@ -90,5 +90,5 @@ Future phase - semantic search via Ollama on adambalm.
 ## Relations
 
 - extends [[BOOTSTRAP]]
-- implements [[Black Flag Protocol]] (decision tracking)
+
 - tracked_in [[Memory Architecture Evolution - Decision Tracking]]

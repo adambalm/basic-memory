@@ -72,5 +72,5 @@ Start with Option 1 (Tailscale in Action). Upgrade to Option 3 if speed matters.
 
 ## Relations
 
-- blocks [[Architecture Decision - Centralized Memory on adambalm]]
-- part_of [[Memory Architecture Evolution - Decision Tracking]]
+- extends [[Architecture Decision - Centralized Memory on adambalm]]
+- tracked_in [[Memory Architecture Evolution - Decision Tracking]]
