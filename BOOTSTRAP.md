@@ -533,3 +533,15 @@ You now have the essential context to work effectively with this Basic Memory kn
 **Document Status:** canonical
 **Last Verified:** 2025-11-26
 **Next Review:** 2026-02-26 (quarterly)
+
+
+---
+
+## Backlog
+
+For pending work and decisions, see: [[Memory System Backlog]]
+
+Key pending items:
+1. **Sync Automation** - [[Pending Decision - Sync Automation]] (HIGH)
+2. **Multi-LLM Access** - ChatGPT/Gemini integration (MEDIUM)
+3. **Mobile Access** - iPhone access via Termius/REST (MEDIUM)
