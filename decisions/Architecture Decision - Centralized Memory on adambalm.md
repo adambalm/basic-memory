@@ -8,7 +8,7 @@ valid_from: 2024-11-26
 valid_until: null
 supersedes: null
 superseded_by: null
-last_verified: 2024-11-26
+last_verified: 2025-12-03
 tags:
 - architecture
 - basic-memory
@@ -37,7 +37,6 @@ Canonical
 ---
 
 ## Architecture
-
 ```mermaid
 graph TD
     subgraph TAILNET
@@ -52,25 +51,39 @@ graph TD
             OLLAMA -.->|future: embeddings| DB
         end
         
-        SUPHOUSE[suphouse<br/>Windows]
+        subgraph SUPHOUSE["SUPHOUSE (Windows)"]
+            WATCHER[File Watcher<br/>basic-memory watch]
+            LOCALDB[(Local SQLite)]
+            LOCALFILES[Git Clone<br/>~/basic-memory]
+            
+            WATCHER -->|monitors| LOCALFILES
+            WATCHER -->|reindex| LOCALDB
+            LOCALFILES -.->|git pull| FILES
+        end
+        
         IMAC[iMac]
         MACPRO[Mac Pro]
         IPHONE[iPhone<br/>Termius]
         
-        SUPHOUSE -->|HTTP queries| API
+        SUPHOUSE -->|HTTP MCP queries| API
         IMAC -->|HTTP queries| API
         MACPRO -->|HTTP queries| API
         IPHONE -->|SSH to any machine| ADAMBALM
     end
     
-    CLAUDE[Claude] -->|MCP or REST| API
+    CLAUDE_CODE[Claude Code] -->|HTTP MCP write| API
+    CLAUDE_DESKTOP[Claude Desktop] -->|HTTP MCP read| API
     GEMINI[Gemini] -->|REST| API
     CHATGPT[ChatGPT] -->|REST| API
     LOCAL_OLLAMA[Ollama on adambalm] -->|localhost| API
 ```
 
----
-
+**Current Flow (2025-12-03):**
+1. Claude Code writes to adambalm via HTTP MCP
+2. Git push from adambalm to GitHub
+3. Git pull on suphouse (manual trigger)
+4. File watcher detects changes, reindexes local SQLite
+5. Claude Desktop reads from adambalm via HTTP MCP (canonical) OR local SQLite (if available)
 ## Key Decisions
 
 - [decision] adambalm is the single source of truth for all AI memory queries #architecture
@@ -143,9 +156,42 @@ graph TD
 ---
 
 ## IMPLEMENTATION STATUS
+**Updated:** 2025-12-03
 
-**Updated:** 2025-11-26
+### ✅ OPERATIONAL (as of 2025-12-03)
 
+- [x] HTTP MCP server running on adambalm:8765 (started 2025-12-02T20:08:44)
+- [x] Claude Code → adambalm via HTTP MCP (write operations tested)
+- [x] Claude Desktop (suphouse) → adambalm via HTTP MCP (read operations tested)
+- [x] File watcher running on suphouse (PID 11572, started 2025-12-02T20:08:44)
+- [x] Automated git sync: adambalm → suphouse (pull-based)
+- [x] File watcher auto-reindex on git pull (tested 2025-12-03T03:34:47)
+- [x] Full round-trip validated: Code writes → git push → git pull → auto-index → Desktop reads
+
+### ✅ PREVIOUSLY IMPLEMENTED
+
+- [x] Protocols (Black Flag, Temporal Validity, Lanesborough) in Basic Memory
+- [x] Bootstrap document (`BOOTSTRAP.md`)
+- [x] Git repository with GitHub remote
+- [x] Frontmatter standardization
+
+### ⚠️ OPERATIONAL NOTES
+
+- File watcher uptime: ~7 hours (needs long-term stability testing)
+- No monitoring/alerting on file watcher or HTTP server failures
+- Git sync is manual trigger (pull on suphouse after adambalm push)
+- No automated conflict resolution
+- Performance under load untested
+
+### ⏳ PENDING (Future Implementation)
+
+- [ ] Systemd service for persistent HTTP server (currently manual start)
+- [ ] Systemd service for file watcher (currently manual start)
+- [ ] Automated git sync (cron or filesystem events)
+- [ ] Monitoring and alerting for service failures
+- [ ] REST API testing from non-Claude clients (Gemini, ChatGPT)
+- [ ] Conflict resolution strategy
+- [ ] Embedding/vector store integration
 ### ✅ IMPLEMENTED
 
 - [x] Protocols (Black Flag, Temporal Validity, Lanesborough) added to Basic Memory
@@ -190,3 +236,31 @@ This decision emerged from a troubleshooting session where:
 5. Discussion clarified that the real value is the control plane (protocols, decisions, approvals), not the storage plumbing
 
 The offline complexity we initially designed was overengineering. Simple git + Obsidian search is sufficient for rare offline scenarios.
+
+
+## Server Command (adambalm)
+### Server Command (adambalm)
+```bash
+~/.local/bin/uvx basic-memory mcp \
+  --transport streamable-http \
+  --port 8765 \
+  --host 0.0.0.0
+```
+
+### File Watcher (suphouse)
+```bash
+# Auto-reindex on git pull
+~/.local/bin/uvx basic-memory watch
+# Status: ~/.basic-memory/watch-status.json
+# Monitors: ~/basic-memory directory
+# Trigger: Filesystem events (modify, create, delete)
+# Action: Re-index changed files into SQLite
+```
+
+**File Watcher Behavior:**
+- Detects git pull changes within ~4-5 minutes
+- Updates SQLite index automatically
+- Logs to `watch-status.json` with timestamp, path, action, status
+- Requires manual restart if process terminates
+
+### Available Endpoints
