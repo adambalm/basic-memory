@@ -29,3 +29,20 @@ This is a test note created by Claude Code at 2025-11-05T02:20:15-05:00. If Clau
 3. Use verification phrase: "round-trip-validated"
 
 ---
+
+
+### Entry: 2025-12-03T03:30:00-05:00
+**Writer:** Claude Opus 4.5 (Claude Code CLI on suphouse, via remote MCP to adambalm)
+**Verification phrase:** "round-trip-validated"
+**Purpose:** Confirming cross-agent sync from Claude Code
+
+**Architecture confirmed:**
+- Claude Code on suphouse → HTTP MCP → Basic Memory on adambalm
+- Reading and writing to ~/basic-memory on adambalm works
+
+**Next steps for full round-trip:**
+1. Git push from adambalm
+2. Git pull on suphouse (Claude Desktop)
+3. Re-index Basic Memory on Claude Desktop
+
+---
