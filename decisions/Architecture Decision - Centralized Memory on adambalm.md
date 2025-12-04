@@ -164,9 +164,9 @@ graph TD
 - [x] Claude Code → adambalm via HTTP MCP (write operations tested)
 - [x] Claude Desktop (suphouse) → adambalm via HTTP MCP (read operations tested)
 - [x] File watcher running on suphouse (PID 11572, started 2025-12-02T20:08:44)
-- [x] Automated git sync: adambalm → suphouse (pull-based)
-- [x] File watcher auto-reindex on git pull (tested 2025-12-03T03:34:47)
-- [x] Full round-trip validated: Code writes → git push → git pull → auto-index → Desktop reads
+- [x] Manual git sync operational: adambalm push → suphouse pull
+- [x] File watcher auto-reindex after git pull (tested 2025-12-03T03:34:47)
+- [x] Full round-trip validated: Code writes → git push → manual pull → auto-index → Desktop reads
 
 ### ✅ PREVIOUSLY IMPLEMENTED
 
@@ -179,7 +179,7 @@ graph TD
 
 - File watcher uptime: ~7 hours (needs long-term stability testing)
 - No monitoring/alerting on file watcher or HTTP server failures
-- Git sync is manual trigger (pull on suphouse after adambalm push)
+- Git sync requires manual pull on suphouse after adambalm push
 - No automated conflict resolution
 - Performance under load untested
 
@@ -187,32 +187,11 @@ graph TD
 
 - [ ] Systemd service for persistent HTTP server (currently manual start)
 - [ ] Systemd service for file watcher (currently manual start)
-- [ ] Automated git sync (cron or filesystem events)
+- [ ] Automated git sync (currently requires manual pull on suphouse)
 - [ ] Monitoring and alerting for service failures
 - [ ] REST API testing from non-Claude clients (Gemini, ChatGPT)
 - [ ] Conflict resolution strategy
 - [ ] Embedding/vector store integration
-### ✅ IMPLEMENTED
-
-- [x] Protocols (Black Flag, Temporal Validity, Lanesborough) added to Basic Memory
-- [x] Bootstrap document created (`BOOTSTRAP.md` with AI context loading instructions)
-- [x] Git repository configured with GitHub remote (private repo)
-- [x] MCP servers configured on both machines (stdio mode working)
-- [x] Bidirectional git sync operational (push/pull workflow)
-- [x] Frontmatter standardization complete across all documents
-
-### ⏳ PENDING (Future Implementation)
-
-- [ ] HTTP server not yet running persistently on adambalm
-- [ ] No systemd service created for persistent HTTP server
-- [ ] REST API not tested from non-Claude clients (Gemini, ChatGPT)
-- [ ] Embedding/vector store integration (future phase)
-
-### 📝 NOTE
-
-Current implementation uses stdio MCP servers (local mode) with git-based sync.
-HTTP server mode can be implemented when multi-client access is needed.
-
 ---
 
 ## Relations
@@ -236,31 +215,3 @@ This decision emerged from a troubleshooting session where:
 5. Discussion clarified that the real value is the control plane (protocols, decisions, approvals), not the storage plumbing
 
 The offline complexity we initially designed was overengineering. Simple git + Obsidian search is sufficient for rare offline scenarios.
-
-
-## Server Command (adambalm)
-### Server Command (adambalm)
-```bash
-~/.local/bin/uvx basic-memory mcp \
-  --transport streamable-http \
-  --port 8765 \
-  --host 0.0.0.0
-```
-
-### File Watcher (suphouse)
-```bash
-# Auto-reindex on git pull
-~/.local/bin/uvx basic-memory watch
-# Status: ~/.basic-memory/watch-status.json
-# Monitors: ~/basic-memory directory
-# Trigger: Filesystem events (modify, create, delete)
-# Action: Re-index changed files into SQLite
-```
-
-**File Watcher Behavior:**
-- Detects git pull changes within ~4-5 minutes
-- Updates SQLite index automatically
-- Logs to `watch-status.json` with timestamp, path, action, status
-- Requires manual restart if process terminates
-
-### Available Endpoints

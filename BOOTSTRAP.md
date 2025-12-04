@@ -142,6 +142,18 @@ If two `canonical` documents contradict:
 
 ## Canonical Architecture Decisions
 
+### Decision: Multi-Model Write Access Governance
+
+**Location:** `decisions/Multi-Model Write Access Governance.md`
+**Status:** canonical (FROZEN - requirements gathering phase)
+**Date:** 2025-12-04
+
+**Summary:**
+Establishes 10 mandatory gates for granting write access to non-Claude models. No model receives write access until all gates pass: governance roles, real namespaces, merge agent, TLS, test harness, checkpointing, eviction switch, threat model, and phased rollout.
+
+**Why this matters:**
+The epistemic core is sacred ground. Multi-model access requires rigorous governance, not ad-hoc Git and informal intuition.
+
 ### Decision: Centralized Memory on adambalm
 
 **Location:** `decisions/Architecture Decision - Centralized Memory on adambalm.md`
