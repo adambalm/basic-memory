@@ -1,18 +1,21 @@
 ---
 title: Institutional Backpropagation Theory
-type: note
+type: conversation
 permalink: non-fiction/conversations/2025-11-05-institutional-backpropagation
 date: 2025-11-05
+status: canonical
+temporal_type: static
+valid_from: 2025-11-05
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-11-26
 tags:
   - theory
   - institutions
   - AI
   - economics
   - subversion
-status: canonical
-temporal_type: static
-valid_from: 2025-11-05
-last_verified: 2025-11-26
 ---
 
 # Institutional Backpropagation Theory

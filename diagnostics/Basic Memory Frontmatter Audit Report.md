@@ -1,7 +1,20 @@
 ---
 title: Basic Memory Frontmatter Audit Report
-type: note
+type: diagnostic
 permalink: diagnostics/basic-memory-frontmatter-audit-report
+status: archived
+temporal_type: point-in-time
+valid_from: 2025-11-26
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-11-26
+tags:
+- audit
+- diagnostic
+- frontmatter
+- report
+- november-2025
 ---
 
 # Basic Memory Frontmatter Audit Report

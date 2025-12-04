@@ -1,14 +1,17 @@
 ---
 title: Ground-Truth-Test
-type: note
+type: test
 permalink: tests/ground-truth-test
-tags:
-  - test
-  - basic-memory
 status: canonical
 temporal_type: static
 valid_from: 2025-11-05
+valid_until: null
+supersedes: null
+superseded_by: null
 last_verified: 2025-11-26
+tags:
+  - test
+  - basic-memory
 ---
 
 This is a test note created by Claude Code at 2025-11-05T02:20:15-05:00. If Claude Web can read this, cross-interface memory works.

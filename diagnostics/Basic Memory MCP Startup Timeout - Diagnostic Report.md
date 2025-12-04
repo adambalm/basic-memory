@@ -1,16 +1,19 @@
 ---
 title: Basic Memory MCP Startup Timeout - Diagnostic Report
-type: note
+type: diagnostic
 permalink: diagnostics/basic-memory-mcp-startup-timeout-diagnostic-report
+status: resolved
+temporal_type: static
+valid_from: 2025-11-26
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-11-26
 tags:
   - diagnostics
   - mcp
   - basic-memory
   - troubleshooting
-status: resolved
-temporal_type: static
-valid_from: 2025-11-26
-last_verified: 2025-11-26
 ---
 
 # Basic Memory MCP Startup Timeout - Diagnostic Report

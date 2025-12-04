@@ -1,18 +1,20 @@
 ---
 title: Yale Job Application - Ed O'Connell
-type: note
+type: application
 permalink: sca-projects/resume-factory/yale-job-application-ed-oconnell
+status: completed
+temporal_type: point-in-time
+valid_from: 2025-11-13
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-11-26
 tags:
 - job-application
 - yale
 - resume
 - ed-oconnell
 - completed
-status: completed
-temporal_type: point-in-time
-valid_from: 2025-11-13
-valid_until: null
-last_verified: 2025-11-26
 ---
 
 # Yale Job Application - Digital Content and Chatbot Manager

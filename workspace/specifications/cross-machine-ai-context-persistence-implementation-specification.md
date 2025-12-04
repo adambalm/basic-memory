@@ -1,17 +1,20 @@
 ---
 title: Cross-Machine AI Context Persistence - Implementation Specification
-type: note
+type: specification
 permalink: workspace/specifications/cross-machine-ai-context-persistence-implementation-specification
+status: canonical
+temporal_type: dynamic
+valid_from: 2025-11-20
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-11-26
 tags:
   - specification
   - cross-machine
   - ai-context
   - git-sync
   - basic-memory
-status: canonical
-temporal_type: dynamic
-valid_from: 2025-11-20
-last_verified: 2025-11-26
 ---
 
 # Cross-Machine AI Context Persistence - Implementation Specification

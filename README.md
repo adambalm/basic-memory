@@ -1,11 +1,18 @@
 ---
 title: Ed O'Connell - Basic Memory Knowledge Base
-type: note
+type: readme
 permalink: readme
 status: canonical
 temporal_type: static
 valid_from: 2025-11-26
+valid_until: null
+supersedes: null
+superseded_by: null
 last_verified: 2025-11-26
+tags:
+- readme
+- repository
+- knowledge-base
 ---
 
 # Ed O'Connell - Basic Memory Knowledge Base

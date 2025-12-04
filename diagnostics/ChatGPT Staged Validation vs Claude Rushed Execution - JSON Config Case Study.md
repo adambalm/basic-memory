@@ -1,15 +1,18 @@
 ---
 title: ChatGPT Staged Validation vs Claude Rushed Execution - JSON Config Case Study
-type: note
+type: diagnostic
 permalink: diagnostics/chat-gpt-staged-validation-vs-claude-rushed-execution-json-config-case-study
+status: canonical
+temporal_type: static
+valid_from: 2025-11-21
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-11-26
 tags:
   - diagnostics
   - case-study
   - ai-comparison
-status: canonical
-temporal_type: static
-valid_from: 2025-11-21
-last_verified: 2025-11-26
 ---
 
 # ChatGPT Staged Validation vs Claude Rushed Execution - JSON Config Case Study

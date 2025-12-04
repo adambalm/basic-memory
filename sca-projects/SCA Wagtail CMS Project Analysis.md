@@ -1,18 +1,20 @@
 ---
 title: SCA Wagtail CMS Project Analysis
-type: note
+type: analysis
 permalink: sca-projects/sca-wagtail-cms-project-analysis
+status: canonical
+temporal_type: dynamic
+valid_from: 2025-11-20
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-11-26
 tags:
 - sca
 - wagtail
 - django
 - adambalm-server
 - remote-analysis
-status: canonical
-temporal_type: dynamic
-valid_from: 2025-11-20
-valid_until: null
-last_verified: 2025-11-26
 ---
 
 # SCA Wagtail CMS Project Analysis

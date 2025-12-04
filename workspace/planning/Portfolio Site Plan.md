@@ -1,7 +1,14 @@
 ---
 title: Portfolio Site Plan
-type: note
+type: plan
 permalink: workspace/planning/portfolio-site-plan
+status: draft
+temporal_type: dynamic
+valid_from: 2025-12-01
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-12-04
 tags:
 - portfolio
 - github-pages

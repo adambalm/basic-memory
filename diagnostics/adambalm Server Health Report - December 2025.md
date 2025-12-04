@@ -1,7 +1,14 @@
 ---
 title: adambalm Server Health Report - December 2025
-type: note
+type: diagnostic
 permalink: diagnostics/adambalm-server-health-report-december-2025
+status: canonical
+temporal_type: point-in-time
+valid_from: 2025-12-04
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-12-04
 tags:
 - adambalm
 - infrastructure
@@ -11,20 +18,6 @@ tags:
 ---
 
 # adambalm Server Health Report - December 2025
-
----
-type: diagnostic
-permalink: diagnostics/adambalm-health-report-2025-12
-status: canonical
-temporal_type: point-in-time
-valid_from: 2025-12-04
-last_verified: 2025-12-04
-tags:
-- adambalm
-- infrastructure
-- health-check
-- diagnostic
----
 
 ## Executive Summary
 

@@ -1,7 +1,14 @@
 ---
 title: Multi-Model Write Access Governance
-type: note
+type: decision
 permalink: decisions/multi-model-write-access-governance
+status: canonical
+temporal_type: dynamic
+valid_from: 2025-12-04
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-12-04
 tags:
 - decision
 - governance
@@ -13,22 +20,6 @@ tags:
 ---
 
 # Multi-Model Write Access Governance
-
----
-type: decision
-status: canonical
-temporal_type: dynamic
-valid_from: 2025-12-04
-last_verified: 2025-12-04
-supersedes: null
-superseded_by: null
-tags:
-- decision
-- governance
-- multi-model
-- security
-- architecture
----
 
 ## Summary
 

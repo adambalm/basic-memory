@@ -1,7 +1,14 @@
 ---
 title: Ghost Writer - Project Documentation
-type: note
+type: project
 permalink: projects/ghost-writer-project-documentation
+status: paused
+temporal_type: dynamic
+valid_from: 2025-01-01
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-12-04
 tags:
 - project
 - ocr
@@ -13,21 +20,6 @@ tags:
 ---
 
 # Ghost Writer - Project Documentation
-
----
-type: project
-status: paused
-temporal_type: dynamic
-valid_from: 2025-01-01
-last_verified: 2025-12-04
-tags:
-- project
-- ocr
-- handwriting
-- supernote
-- multi-agent
-- provisional
----
 
 ## Summary
 

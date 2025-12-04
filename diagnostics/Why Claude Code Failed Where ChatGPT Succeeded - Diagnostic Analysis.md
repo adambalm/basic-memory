@@ -1,16 +1,19 @@
 ---
 title: Why Claude Code Failed Where ChatGPT Succeeded - Diagnostic Analysis
-type: note
+type: diagnostic
 permalink: diagnostics/why-claude-code-failed-where-chat-gpt-succeeded-diagnostic-analysis
+status: canonical
+temporal_type: static
+valid_from: 2025-11-21
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-11-26
 tags:
   - diagnostics
   - case-study
   - ai-comparison
   - lessons-learned
-status: canonical
-temporal_type: static
-valid_from: 2025-11-21
-last_verified: 2025-11-26
 ---
 
 # Why Claude Code Failed Where ChatGPT Succeeded - Diagnostic Analysis

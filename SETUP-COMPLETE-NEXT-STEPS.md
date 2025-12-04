@@ -1,12 +1,19 @@
 ---
 title: Basic Memory GitHub Setup - Status and Next Steps
-type: note
+type: documentation
 permalink: setup-complete-next-steps
 status: completed
 temporal_type: static
 valid_from: 2025-11-20
 valid_until: 2025-11-26
+supersedes: null
+superseded_by: null
 last_verified: 2025-11-26
+tags:
+- setup
+- github
+- basic-memory
+- documentation
 ---
 
 # Basic Memory GitHub Setup - Status and Next Steps

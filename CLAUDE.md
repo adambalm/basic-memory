@@ -1,17 +1,19 @@
 ---
 title: CLAUDE.md - Basic Memory Repository Conventions
-type: note
+type: conventions
 permalink: claude-md-repository-conventions
+status: canonical
+temporal_type: dynamic
+valid_from: 2025-11-20
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-11-26
 tags:
   - repository
   - conventions
   - documentation
   - ai-guidelines
-status: canonical
-temporal_type: dynamic
-valid_from: 2025-11-20
-valid_until: null
-last_verified: 2025-11-26
 ---
 
 # CLAUDE.md - Basic Memory Repository Conventions

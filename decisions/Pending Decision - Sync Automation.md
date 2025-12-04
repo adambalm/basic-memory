@@ -1,7 +1,14 @@
 ---
 title: Pending Decision - Sync Automation
-type: note
+type: decision
 permalink: decisions/pending-decision-sync-automation
+status: draft
+temporal_type: dynamic
+valid_from: 2025-12-03
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-12-04
 tags:
 - pending
 - decision

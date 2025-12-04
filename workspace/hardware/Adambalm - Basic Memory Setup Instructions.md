@@ -1,16 +1,19 @@
 ---
 title: Adambalm - Basic Memory Setup Instructions
-type: note
+type: documentation
 permalink: workspace/hardware/adambalm-basic-memory-setup-instructions
+status: completed
+temporal_type: static
+valid_from: 2025-11-24
+valid_until: null
+supersedes: null
+superseded_by: null
+last_verified: 2025-11-26
 tags:
   - setup
   - adambalm
   - basic-memory
   - instructions
-status: completed
-temporal_type: static
-valid_from: 2025-11-24
-last_verified: 2025-11-26
 ---
 
 # Adambalm - Basic Memory Setup Instructions
